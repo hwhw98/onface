@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S13-Dd-hCQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="firstViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="firstViewController" customModule="swiftCV2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8I-6U-iuV">
+                                <rect key="frame" x="47" y="368" width="320" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="TeT-cM-Qbi"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tJ-dw-ezT" userLabel="selectAge">
+                                <rect key="frame" x="186.5" y="315.5" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44u-PT-j3L" userLabel="femaleBtn">
+                                <rect key="frame" x="64" y="560" width="30" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=""/>
+                                <connections>
+                                    <action selector="female" destination="BYZ-38-t0r" eventType="touchUpInside" id="Isb-2p-fcN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLh-7y-HPg" userLabel="maleBtn">
+                                <rect key="frame" x="322" y="560" width="30" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=""/>
+                                <connections>
+                                    <action selector="male" destination="BYZ-38-t0r" eventType="touchUpInside" id="yMY-XX-P7P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTz-Us-rh4">
+                                <rect key="frame" x="192" y="832" width="30" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3cj-XC-d0b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VLh-7y-HPg" secondAttribute="trailing" constant="62" id="6cc-WL-Ms7"/>
+                            <constraint firstItem="44u-PT-j3L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="F7m-j3-EAp"/>
+                            <constraint firstItem="6tJ-dw-ezT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UUo-90-C0p"/>
+                            <constraint firstItem="n8I-6U-iuV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="X19-c6-O6l"/>
+                            <constraint firstItem="n8I-6U-iuV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cMi-yv-0AX"/>
+                            <constraint firstItem="n8I-6U-iuV" firstAttribute="top" secondItem="6tJ-dw-ezT" secondAttribute="bottom" constant="32" id="pi7-r1-Xrh"/>
+                            <constraint firstItem="VLh-7y-HPg" firstAttribute="top" secondItem="n8I-6U-iuV" secondAttribute="bottom" constant="32" id="pxN-Lr-JcE"/>
+                            <constraint firstItem="mTz-Us-rh4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wCx-FG-Efd"/>
+                            <constraint firstItem="44u-PT-j3L" firstAttribute="top" secondItem="n8I-6U-iuV" secondAttribute="bottom" constant="32" id="zxb-Vp-do5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jYq-vm-mID"/>
+                    <connections>
+                        <outlet property="agePicker" destination="n8I-6U-iuV" id="sP6-Te-xQ9"/>
+                        <outlet property="femaleBtn" destination="44u-PT-j3L" id="2nG-iB-tnD"/>
+                        <outlet property="maleBtn" destination="VLh-7y-HPg" id="dnS-zt-g4N"/>
+                        <outlet property="nextBtn" destination="mTz-Us-rh4" id="VJE-XU-gra"/>
+                        <outlet property="selectAge" destination="6tJ-dw-ezT" id="Tmd-7w-Vi3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="68.973214285714278"/>
+        </scene>
+        <!--Select View Controller-->
+        <scene sceneID="1DU-x2-F3n">
+            <objects>
+                <viewController storyboardIdentifier="selectViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qwo-wb-jOm" customClass="selectViewController" customModule="swiftCV2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gOU-ol-fzE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbH-YE-Uuz">
+                                <rect key="frame" x="192" y="548" width="30" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="buttonClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="lLE-8d-ZaL"/>
+                                    <action selector="buttonClicked" destination="Qwo-wb-jOm" eventType="touchUpInside" id="pLM-J2-FAR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6E0-dv-s0N">
+                                <rect key="frame" x="10" y="58" width="30" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="back:" destination="Qwo-wb-jOm" eventType="touchUpInside" id="9gR-Ff-M9c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2bB-gL-bSW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6E0-dv-s0N" firstAttribute="leading" secondItem="2bB-gL-bSW" secondAttribute="leading" constant="10" id="FNk-5q-azv"/>
+                            <constraint firstItem="bbH-YE-Uuz" firstAttribute="centerX" secondItem="gOU-ol-fzE" secondAttribute="centerX" id="Nzk-tS-6Wt"/>
+                            <constraint firstItem="6E0-dv-s0N" firstAttribute="top" secondItem="2bB-gL-bSW" secondAttribute="top" constant="10" id="ybS-rx-j0K"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backBtn" destination="6E0-dv-s0N" id="Exs-Rj-w2o"/>
+                        <outlet property="galleryBtn" destination="bbH-YE-Uuz" id="t9K-ww-wdO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1NQ-Ke-TMV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1651" y="69"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="9aa-TX-YbO">
+            <objects>
+                <viewController storyboardIdentifier="resultViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ijI-9E-Tea" customClass="resultViewController" customModule="swiftCV2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T8n-6G-TwC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="kpd-zg-N8u" userLabel="backbtn">
+                                <rect key="frame" x="161" y="430" width="92" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="back:" destination="ijI-9E-Tea" eventType="touchUpInside" id="eNO-BO-ej3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="3ST-YR-4EE" userLabel="homebtn">
+                                <rect key="frame" x="161" y="430" width="92" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="home:" destination="ijI-9E-Tea" eventType="touchUpInside" id="iIB-nY-6UF"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="V9v-sY-lyz">
+                                <rect key="frame" x="0.0" y="448" width="414" height="414"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0tJ-jh-kf6">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="EYA-gJ-5YN">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Xaz-Bb-UzO">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IKZ-RG-ger"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="backBtn" destination="kpd-zg-N8u" id="T09-Ob-6Mk"/>
+                        <outlet property="collectionView" destination="V9v-sY-lyz" id="T0H-mQ-1iA"/>
+                        <outlet property="homeBtn" destination="3ST-YR-4EE" id="zp0-Xf-YYD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WiQ-UZ-au2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2371.0144927536235" y="56.919642857142854"/>
+        </scene>
+        <!--One View Controller-->
+        <scene sceneID="oGc-mp-YqA">
+            <objects>
+                <viewController storyboardIdentifier="oneViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KMs-TF-AOe" customClass="oneViewController" customModule="swiftCV2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q8T-zH-por">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="1rg-tK-tdG">
+                                <rect key="frame" x="192" y="433" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="back:" destination="KMs-TF-AOe" eventType="touchUpInside" id="iQW-Sd-E7z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nmd-IW-Wzl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="backbtn" destination="1rg-tK-tdG" id="4hH-Qf-09a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sD2-Dj-yY7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1182.608695652174" y="845.75892857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KzD-x6-8Ce">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="S13-Dd-hCQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FgU-PX-975">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ulg-0o-T2W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ttq-Le-C0W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="68.973214285714278"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
